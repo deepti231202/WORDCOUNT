@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Count</title>
+    <style>
+         body{
+            
+            background-image: url("/assert/assert1/assert/images.jfif");
+        background-size: 100% 100% ;
+        
+        background-image: no-repeat;
+        background-image: fixed;
+        ;
+        }
+          div{
+           
+        border-radius: 10px;
+        border: 8px solid ;
+        padding-left:70px;
+        padding-bottom: 20px;
+        width: 500px;
+     background-color: rgb(95, 215, 218);
+     margin-left: 370px;
+     margin-bottom: 250px;
+
+
+    }
+    div:hover{
+       background-color: rgb(128, 35, 88) ;
+    }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>"Word Counter..."</h1>
+    <textarea id="inputText" rows="5" cols="40"></textarea>
+    <p>Word Count: <span id="wordCount">0</span></p>
+    
+    <script>
+        const inputText = document.getElementById('inputText');
+        const wordCountDisplay = document.getElementById('wordCount');
+
+        inputText.addEventListener('input', updateWordCount);
+
+        function updateWordCount() {
+            const text = inputText.value.trim();
+            const words = text === '' ? 0 : text.split(/\s+/).length;
+            wordCountDisplay.textContent = words;
+        }
+    </script>
+    </div>
+</body>
+</html>
